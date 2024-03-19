@@ -23,7 +23,6 @@ const authReducer = (state = initState, action) => {
         ...initState, 
       };
     case ActiontTpes.PROFILE_LOADED:
-      console.log(action.user)
       return {
         ...state,
         userName: action.user.user.userName,

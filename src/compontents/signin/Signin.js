@@ -21,7 +21,7 @@ function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  console.log(username, "userName checking in signin");
+const [error,setError] = useState()
   const Signin = () => {
     if (!email || !password) {
       alert("Fill in all the fields");
@@ -30,16 +30,21 @@ function Signin() {
         email: email,
         password: password,
       };
-
       axios
         .post("http://localhost:5000/api/user/signin", data)
         .then((res) => {
           dispatch({ type: ActiontTpes.SIGN_IN, data: res.data });
           localStorage.setItem("token", res.data.token);
           setUsername(res.data.user.username);
-          navigate("/Acount");
+          navigate("/Acount/Add/Show");
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {
+          if (error.response && error.response.status === 401) {
+            setError("Email or password is incorrect");
+          } else {
+            setError("An error occurred. Please try again later.");
+          }
+        })
     }
   };
 

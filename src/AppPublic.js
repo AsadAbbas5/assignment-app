@@ -1,23 +1,19 @@
-import { Box } from '@mui/material'
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Box } from "@mui/material";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Signin from './compontents/signin/Signin'
-import SignUp from './compontents/Signup/Signup'
-import AddPost from './compontents/laibaray/addPost/addPosts'
+import Signin from "./compontents/signin/Signin";
+import SignUp from "./compontents/Signup/Signup";
 
 function AppPublic() {
   return (
     <Box>
       <Routes>
-        <Route path='/' Component={AddPost} />
-        <Route path='signin' Component={Signin} />
-        <Route path='signup' Component={SignUp} />
-
+        <Route path="/signin" Component={Signin} />
+        <Route path="/signup" Component={SignUp} />
       </Routes>
-
     </Box>
-  )
+  );
 }
 
-export default AppPublic
+export default AppPublic;

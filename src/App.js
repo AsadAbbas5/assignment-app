@@ -7,9 +7,11 @@ import NavBar from "./compontents/laibaray/NavBar";
 import { Box, Container } from "@mui/material";
 import { useEffect } from "react";
 import { loadProfile } from "./compontents/store/action/actiontypes";
-function App({ isLogin, loadProfile }) {
+import { loadProducts } from "./compontents/store/action/ProductAction";
+function App({ isLogin, loadProfile,loadProducts}) {
   useEffect(() => {
     loadProfile();
+    loadProducts()
   }, []);
   return (
     <div className="App">
@@ -23,4 +25,4 @@ const mapStateProps = (state) => {
     isLogin: state.auth.isLogin,
   };
 };
-export default connect(mapStateProps, { loadProfile })(App);
+export default connect(mapStateProps, { loadProfile,loadProducts })(App);

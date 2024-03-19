@@ -5,6 +5,7 @@
     text-decoration:none;
     margin:0 1rem;
     transition: all 0.5s ;
+    
 }
 .link:hover{
     color: #e9e9e9;

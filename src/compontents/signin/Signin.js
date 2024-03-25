@@ -21,7 +21,7 @@ function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-const [error,setError] = useState()
+  const [error, setError] = useState();
   const Signin = () => {
     if (!email || !password) {
       alert("Fill in all the fields");
@@ -44,7 +44,7 @@ const [error,setError] = useState()
           } else {
             setError("An error occurred. Please try again later.");
           }
-        })
+        });
     }
   };
 
@@ -64,7 +64,7 @@ const [error,setError] = useState()
         <Box textAlign={"center"}>
           <Avatar sx={{ margin: "0 auto 1rem" }} />
           <Typography fontWeight={800} fontSize={"1.5rem"}>
-            SignIn
+            Sign In
           </Typography>
         </Box>
         <Box margin={"1rem 0"}>

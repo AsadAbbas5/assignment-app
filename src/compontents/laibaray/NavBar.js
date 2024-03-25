@@ -52,7 +52,9 @@ function NavBar({isLogin}) {
           !isLogin?
           <>
         
-
+        <Link to={"/"} className={style.link}>
+           Home
+         </Link>
          <Link to={"/signin"} className={style.link}>
            Sign in
          </Link>
@@ -62,7 +64,10 @@ function NavBar({isLogin}) {
          </Link>
          </>
             :
-            <Link to={"/signin"} style={{ textDecoration: "none" }}>
+
+            <>
+              
+            <Link to={"/"} style={{ textDecoration: "none" }}>
             <Button
               onClick={logout}
               variant="contained"
@@ -83,6 +88,10 @@ function NavBar({isLogin}) {
               Log Out
             </Button>
           </Link>
+         
+          </>
+          
+
         
 
          }

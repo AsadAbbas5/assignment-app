@@ -22,7 +22,7 @@ function Acount() {
         <p style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
           Welcome: {userName}
         </p>
-        <Link to={"/signin"} style={{ textDecoration: "none" }}>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
           <Button
             onClick={logout}
             variant="contained"

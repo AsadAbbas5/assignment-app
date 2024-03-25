@@ -5,13 +5,13 @@ import Acount from "./compontents/Acount/Acount";
 import ShowProduct from "./compontents/Acount/showProduct/ShowProduct";
 import ProductCard from "./compontents/Acount/showProduct/ProductCard/ProductCar";
 import SinglelProduct from "./compontents/Acount/showProduct/SinglelProduct";
-
+import Home from "./compontents/Home/Home";
 function AppPrivit() {
   return (
     <Box>
       <Box>
         <Routes>
-               
+            <Route path="/" Component={Home}/>
             <Route path="/Acount/Add/Show" Component={Acount}/>
           <Route path="/products/:id" Component={SinglelProduct} />
         </Routes>
